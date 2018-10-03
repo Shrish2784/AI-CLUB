@@ -20,6 +20,10 @@ body {
 }
 a {
   text-decoration: none;
+  color: #444;
+}
+a:focus {
+  text-decoration: none;
 }
 #container {
   width: 100%;
@@ -75,6 +79,7 @@ header img {
   left: 0;
   z-index: 1;
 }
+
 #heading {
   top: 50%;
   left: 50%;
@@ -124,6 +129,8 @@ header img {
   height: 200px;
 }
 #aboutData {
+  width: 50%;
+  line-height: 1.5;
   margin-top: 12vh;
   padding: 10px 50px;
   color: #444;
@@ -132,6 +139,13 @@ header img {
   font-size: 100px;
   margin: 0;
   font-weight: normal;
+  border-bottom: 2px #444 solid;
+}
+#aboutData h2  {
+  font-size: 40px;
+}
+#aboutData {
+  font-size: 25px;
 }
 #contact {
   margin-top: 10vh;
@@ -147,10 +161,11 @@ header img {
 #faculty {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(3, 33.33%);
 }
 #facultyInfo img {
   width: 100%;
+  min-height: 350px;
 }
 #facultyInfo {
   text-align: center;
@@ -158,12 +173,27 @@ header img {
   color: #444;
   font-size: 35px;
   width: 400px;
+  min-height: 400px;
   background-color: #fff;
   padding: 10px;
   transition: all 0.2s ease;
 }
 #facultyInfo:hover {
   box-shadow: 0 2px 20px #222;
+}
+.student #live {
+  display: block;
+}
+.student #hidden {
+  display: none;
+  padding: 40px;
+}
+
+.student:hover #live {
+  display: none;
+}
+.student:hover #hidden {
+  display: block;
 }
 @media (max-width: 1350px) {
   #heading {
